@@ -1,0 +1,62 @@
+\section*{Derivación de $c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}}$ a partir de las ecuaciones de Maxwell}
+
+Partimos de las ecuaciones de Maxwell en el vacío (sin cargas ni corrientes):
+
+\begin{align}
+	\nabla \cdot \vec{E} &= 0 \label{eq:gauss_electric}\\
+	\nabla \cdot \vec{B} &= 0 \label{eq:gauss_magnetic}\\
+	\nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \label{eq:faraday}\\
+	\nabla \times \vec{B} &= \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \label{eq:ampere_maxwell}
+\end{align}
+
+Aplicamos el operador rotacional a la ecuación de Faraday (\ref{eq:faraday}):
+
+\begin{equation}
+	\nabla \times (\nabla \times \vec{E}) = -\frac{\partial}{\partial t} (\nabla \times \vec{B}) \label{eq:rot_rot_E}
+\end{equation}
+
+Sustituyendo la ecuación de Ampère-Maxwell (\ref{eq:ampere_maxwell}) en (\ref{eq:rot_rot_E}):
+
+\begin{equation}
+	\nabla \times (\nabla \times \vec{E}) = -\mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} \label{eq:wave_raw}
+\end{equation}
+
+Utilizamos la identidad vectorial:
+\[
+\nabla \times (\nabla \times \vec{E}) = \nabla(\nabla \cdot \vec{E}) - \nabla^2 \vec{E}
+\]
+
+Dado que \( \nabla \cdot \vec{E} = 0 \), la identidad se reduce a:
+\begin{equation}
+	\nabla \times (\nabla \times \vec{E}) = -\nabla^2 \vec{E} \label{eq:vector_identity}
+\end{equation}
+
+Sustituyendo en la ecuación (\ref{eq:wave_raw}):
+
+\begin{equation}
+	-\nabla^2 \vec{E} = -\mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2}
+\end{equation}
+
+Cancelamos los signos negativos:
+
+\begin{equation}
+	\nabla^2 \vec{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} \label{eq:wave_equation}
+\end{equation}
+
+La ecuación (\ref{eq:wave_equation}) es la ecuación de onda para el campo eléctrico. Comparándola con la forma general de una ecuación de onda:
+
+\[
+\nabla^2 \vec{E} = \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2}
+\]
+
+Se concluye que:
+
+\[
+\frac{1}{c^2} = \mu_0 \varepsilon_0 \quad \Rightarrow \quad c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}
+\]
+
+\textbf{Por lo tanto, la velocidad de propagación de las ondas electromagnéticas en el vacío es:}
+
+\[
+c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}}
+\]

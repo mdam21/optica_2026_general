@@ -1,0 +1,199 @@
+% main.tex
+\documentclass[12pt, twoside]{book}
+
+%%%%%%%% Preamble %%%%%%%%%%%%
+\title{Guía de Armado de Telescopios}
+\usepackage[utf8]{inputenc}
+\usepackage[greek, spanish, es-noindentfirst, es-nolists, es-noshorthands]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{capt-of}
+\usepackage{sidecap}
+\usepackage{caption}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{anysize}
+\usepackage{appendix}
+\usepackage{tocbibind}
+\usepackage{anyfontsize}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage[backend=biber, style=ieee]{biblatex} % Usa Biber como backend
+\usepackage[most]{tcolorbox}
+
+
+% Configuración de rutas
+\graphicspath{{./images/}}
+\addbibresource{bib/references.bib}
+
+% Configuración de página
+\geometry{
+	left=2.5cm,
+	right=2.5cm,
+	top=2.5cm,
+	bottom=2.5cm
+}
+
+% Configuracion de Encabezado
+% En el preámbulo (después de cargar los paquetes)
+\usepackage{tikz} % Para elementos gráficos
+\usetikzlibrary{positioning}
+
+% Configuración avanzada del encabezado
+\renewcommand{\headrule}{%
+	\color{blue!60!black}\hrule width\textwidth height 1.2pt \vspace{1pt}%
+	\color{blue!40!black}\hrule width\textwidth height 0.4pt%
+}
+
+\fancyhead[LE,RO]{%
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=north west] at (current page.north west) {%
+			\includegraphics[height=1.2cm]{images/logo-escuela}%
+		};
+		\node[anchor=north east] at (current page.north east) {%
+			\textcolor{blue!80!black}{\footnotesize Página \thepage}%
+		};
+	\end{tikzpicture}%
+}
+
+\fancyhead[RE,LO]{\textcolor{blue!80!black}{%
+		\footnotesize Guía de Armado de Telescopios | \leftmark%
+}}
+
+% Estilos de títulos
+\newcommand\mymaintitlesize{\fontsize{16pt}{19.2pt}\selectfont}
+\newcommand\mysubtitlesize{\fontsize{14pt}{16.8pt}\selectfont}
+
+% Configuración de encabezados y pies de página
+\pagestyle{fancy}
+
+
+\fancyhf{}
+\fancyhead[LE,RO]{\footnotesize Guía de Armado de Telescopios}
+\fancyhead[RE,LO]{\footnotesize Optica Chapter - YT}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Entorno	s matemáticos (opcional)
+\newtheorem{definicion}{Definición}
+\newtheorem{ejemplo}{Ejemplo}
+\newtheorem{consejo}{Consejo Práctico}
+
+% Renombrado de tablas
+\addto\captionsspanish{% 
+	\renewcommand{\listtablename}{Índice de tablas} % Cambia el título
+}
+
+% Crear un contador para numerar las cajas
+\newtcolorbox[auto counter, number within=section]{pabox}[2][]{%
+	colback=red!5!white,
+	colframe=red!75!black,
+	fonttitle=\bfseries,
+	title=Definición~\thetcbcounter: #2,
+	#1
+}
+
+% Crear una nueva caja basada en el contador anterior
+\NewTColorBox[use counter from=pabox]{mybox}{ O{red} m d"" !O{} }{%
+	enhanced,
+	colframe=#1!75!black,
+	colback=#1!5!white,
+	fonttitle=\bfseries,
+	title={\thetcbcounter~#2},
+	IfValueT={#3}{watermark text={#3}},
+	#4
+}
+%%%%%%%% Preamble ends %%%%%%%%%%%%
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Portada %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\thispagestyle{empty}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\textwidth]{logo_invertido}
+		\end{figure}
+		\vspace*{1cm}
+		
+		{\mymaintitlesize\textbf{Guía Práctica de Armado de Telescopios}}\\
+		\vspace{1cm}
+		{\mysubtitlesize\textbf{Curso de Óptica Experimental y Técnicas de Observación}}\\
+		\vspace{2cm}
+		{\mysubtitlesize\textbf{Instructor:}\\
+			Damian Andrango - Físico\\
+			\vspace{1cm}
+			\textbf{Edición:}\\
+			Abril 2024\\
+			\vspace{1cm}
+			\textbf{Duración del curso:}\\
+			20 horas teórico-prácticas}
+	\end{center}
+	\clearpage
+	
+	%%%%%%%%%%%%%%%%%%%% Front Matter %%%%%%%%%%%%%%%%%%%%%%%%%
+	\frontmatter
+	
+	\tableofcontents
+	\cleardoublepage
+%	\listoffigures
+%	\listoftables
+	
+	\mainmatter
+	
+	%%%%%%%%%%%%%%%%%%%% Módulos Principales %%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	Este documento es una guía teórico-práctica que acompañará el desarrollo del curso de construcción de telescopios ópticos de bajo costo, utilizando herramientas digitales como impresión 3D, diseño CAD y corte láser.
+	
+	La iniciativa nace desde el grupo del Capítulo de Óptica, con el propósito de diseñar y fabricar telescopios accesibles que puedan ser llevados a escuelas, acercando la astronomía a comunidades con recursos limitados. A lo largo del curso, no solo aprenderemos cómo funcionan los telescopios, sino que también construiremos uno funcional desde cero.
+	
+	Cada módulo está diseñado para ser abordado en sesiones de 2 a 2,5 horas, divididas en bloques de trabajo (pomodoros). Al finalizar, cada participante contará con un prototipo propio, adaptado a sus ideas y preferencias. También se introducirán habilidades prácticas como modelado 3D en SolidWorks, preparación de piezas con slicers para impresión 3D, y diseño de planos para corte láser.
+	
+	Como punto de partida, utilizaremos un prototipo inicial ya empezado, el cual servirá de referencia tanto para el aprendizaje como para su presentación ante potenciales inversionistas, con miras a escalar el proyecto.
+	
+	Cabe señalar que para llevar a cabo la construcción de los telescopios será necesario adquirir ciertos materiales y componentes clave, como espejos y oculares, filamento para impresión 3D, tubos de PVC, maderas para las bases, entre otros. Estos elementos serán definidos y organizados durante las primeras sesiones del curso, priorizando soluciones de bajo costo y materiales disponibles localmente o por compra con envío en corto tiempo. internacional. 
+	
+	
+	\chapter{Telescopios Generalidades}
+	\label{telescopes_general}
+	\input{modules/modulo01}
+	
+	\chapter{Solidworks - Modelado por CAD de un Telescopio}
+	\label{solidworks_focused_telescopes}
+	\input{modules/modulo02}
+	
+	\chapter{Impresion 3D - Slicer}
+	%\label{slicer_3d_printing}
+	%\input{modules/modulo03}
+	
+	\chapter{Herramientas extra - Solidworks}
+	\label{advanced_techniques}
+	\input{modules/modulo04}
+	
+	%%%%%%%%%%%%%%%%%%%% Bibliografía %%%%%%%%%%%%%%%%%%%%%%%%%
+	\backmatter
+	%\bibliographystyle{bst/IEEEtran}
+	%\bibliography{bib/references}
+	\printbibliography[title={Referencias Bibliográficas}]
+	
+	%%%%%%%%%%%%%%%%%%%% Apéndices %%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{appendix}
+		\chapter{Anexo de Matemáticas}
+		\input{chapters/apendice-matematicas}
+		
+		\chapter{Lista de Herramientas}
+		\input{chapters/apendice-herramientas}
+		
+		\chapter{Diagramas Técnicos}
+		\input{chapters/apendice-diagramas}
+		
+		%\chapter{Lista de Partes}
+		\input{chapters/partes-a-comprar}
+	\end{appendix}
+	
+\end{document}
