@@ -7,19 +7,19 @@ Este repsotiorio contiene el desarrollo integral de un telescopio y un espectrof
 /
 ├── hardware/
 │   ├── telescopio/
-│   │   ├── cad/           # Archivos .STL, .STEP o SolidWorks
-│   │   └── docs/          # Manual de ensamblaje (Markdown/PDF)
+│   │   ├── cad/           # Archivos de software CAD
+│   │   └── docs/          # Manual de ensamblaje
 │   └── espectrofluorometro/
 │       ├── cad/
 │       ├── electronics/   # Esquemas de circuitos (Kicad/EasyEDA)
 │       └── docs/          # Manual de ensamblaje
 ├── software/
-│   ├── drivers/           # Control de sensores/motores
-│   ├── processing/        # Scripts de análisis de datos (Python)
-│   └── firmware/          # Código para microcontroladores (Arduino/ESP32)
+│   ├── drivers/           # Control de sensore
+│   ├── processing/        # Scripts generales Python
+│   └── firmware/          # Código para microcontroladores
 ├── theory/                # Documentación teórica y principios físicos
 ├── guides/                # Guías de usuario y protocolos de laboratorio
-└── README.md              # El "mapa" general del proyecto
+└── README.md              # Mapa general del sitio
 ```
 
 ## Hardware y Diseño
