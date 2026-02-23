@@ -148,22 +148,51 @@
 	
 	%%%%%%%%%%%%%%%%%%%% Módulos Principales %%%%%%%%%%%%%%%%%%%%%%%%%
 	
-	Este documento es una guía teórico-práctica que acompañará el desarrollo del curso de construcción de telescopios ópticos de bajo costo, utilizando herramientas digitales como impresión 3D, diseño CAD y corte láser.
-	
-	La iniciativa nace desde el grupo del Capítulo de Óptica, con el propósito de diseñar y fabricar telescopios accesibles que puedan ser llevados a escuelas, acercando la astronomía a comunidades con recursos limitados. A lo largo del curso, no solo aprenderemos cómo funcionan los telescopios, sino que también construiremos uno funcional desde cero.
-	
-	Cada módulo está diseñado para ser abordado en sesiones de 2 a 2,5 horas, divididas en bloques de trabajo (pomodoros). Al finalizar, cada participante contará con un prototipo propio, adaptado a sus ideas y preferencias. También se introducirán habilidades prácticas como modelado 3D en SolidWorks, preparación de piezas con slicers para impresión 3D, y diseño de planos para corte láser.
-	
-	Como punto de partida, utilizaremos un prototipo inicial ya empezado, el cual servirá de referencia tanto para el aprendizaje como para su presentación ante potenciales inversionistas, con miras a escalar el proyecto.
-	
-	Cabe señalar que para llevar a cabo la construcción de los telescopios será necesario adquirir ciertos materiales y componentes clave, como espejos y oculares, filamento para impresión 3D, tubos de PVC, maderas para las bases, entre otros. Estos elementos serán definidos y organizados durante las primeras sesiones del curso, priorizando soluciones de bajo costo y materiales disponibles localmente o por compra con envío en corto tiempo. internacional. 
 	
 	
-	\chapter{Telescopios Generalidades}
-	\label{telescopes_general}
+	\section*{Introducción}
+	
+	Este documento constituye una guía teórico-práctica que acompañará el desarrollo del taller de prototipado de dispositivos ópticos, enfocado en el diseño y construcción de telescopios y espectrómetros.
+	La propuesta integra la aplicación de varios Objetivos de Desarrollo Sostenible (ODS) establecidos por la ONU, buscando vincular la ciencia con la educación, la innovación y la equidad social. En particular, se abordan los siguientes objetivos:
+	
+	\begin{itemize}
+		\item \textbf{ODS 4:} Educación de calidad. Promover el aprendizaje activo de la ciencia y la tecnología mediante la fabricación de instrumentos ópticos, fomentando el pensamiento crítico y la creatividad en contextos educativos.
+		\item \textbf{ODS 10:} Reducción de las desigualdades. Desarrollar proyectos que permitan llevar telescopios y materiales educativos a escuelas de bajos recursos, promoviendo la inclusión científica y tecnológica.
+		\item \textbf{ODS 12:} Producción y consumo responsables. Reutilizar y adaptar componentes existentes —como cámaras web, lentes o piezas electrónicas— para crear nuevos dispositivos, impulsando una cultura de sostenibilidad y aprovechamiento de recursos.
+		\item \textbf{ODS 17:} Alianzas para lograr los objetivos. Fortalecer la cooperación entre universidades y grupos de investigación, compartiendo herramientas, conocimientos y espacios de fabricación digital para impulsar la innovación colaborativa.
+	\end{itemize}
+	
+	\section*{Propósito del taller}
+	El taller busca fomentar el desarrollo de prototipos ópticos de bajo costo, utilizando herramientas digitales como impresión 3D, corte láser y diseño paramétrico.
+	Esta iniciativa nace desde el Capítulo de Óptica de la Universidad Yachay Tech, con el propósito de diseñar y fabricar instrumentos accesibles para entornos económicamente limitados —como escuelas rurales o comunidades con recursos reducidos—.
+	Además de construir dispositivos funcionales, se pretende generar capacidades locales, promoviendo la autogestión tecnológica y acercando la ciencia a más personas.
+	
+	Durante el curso, los participantes no solo comprenderán cómo funcionan los telescopios y espectrómetros, sino que también aprenderán a crear sus propios dispositivos desde cero, combinando principios científicos con creatividad e innovación.
+	
+	\section*{Estructura del curso}
+	Cada módulo está diseñado para desarrollarse en sesiones de 2 a 2,5 horas, combinando explicaciones conceptuales, demostraciones prácticas y actividades de construcción.
+	Al finalizar el curso, cada participante —individualmente o en grupo— contará con un prototipo funcional, adaptado a sus ideas, objetivos y materiales disponibles.
+	
+	El taller empleará principalmente las siguientes herramientas:
+	
+	\begin{itemize}
+		\item \textbf{SolidWorks} para el diseño paramétrico y modelado 3D.
+		\item \textbf{Inkscape} para la elaboración de gráficos vectoriales y piezas cortables.
+		\item \textbf{Ultimaker Cura} para la preparación de archivos de impresión 3D.
+	\end{itemize}
+	
+	Estas aplicaciones fueron seleccionadas por su curva de aprendizaje accesible, lo que permitirá que los participantes adquieran habilidades básicas de prototipado digital sin requerir experiencia previa. Finalmente se incluirá módulos más avanzados y otros programas/aplicativos para realizar objetos más sencillos/útiles.
+	
+	\section*{Materiales y recursos}
+	Para la construcción de los telescopios será necesario disponer de espejos u oculares, filamento para impresión 3D, tubos de PVC, maderas u otros materiales estructurales.
+	En el caso de los espectrómetros, se requerirá al menos un sensor óptico o cámara y algunos componentes electrónicos básicos.
+	Durante las primeras sesiones, se definirá en conjunto qué materiales se utilizarán y cómo acceder a ellos, priorizando siempre opciones que puedan ser recicladas u opciones de bajo costo con materiales disponibles localmente. Igualmente, de ser necesario utilizar algunas herramientas se buscará soluciones viables mediante colaboraciones universitarias o compras con envío internacional de corto plazo.
+	
+	\chapter{Telescopios}
+	\label{chapter_telescopes}
 	\input{modules/modulo01}
 	
-	\chapter{Solidworks - Modelado por CAD de un Telescopio}
+	\chapter{Modelado CAD}
 	\label{solidworks_focused_telescopes}
 	\input{modules/modulo02}
 	
@@ -171,7 +200,7 @@
 	%\label{slicer_3d_printing}
 	%\input{modules/modulo03}
 	
-	\chapter{Herramientas extra - Solidworks}
+	\chapter{Herramientas extra}
 	\label{advanced_techniques}
 	\input{modules/modulo04}
 	

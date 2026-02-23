@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Si se utiliza o se modifica el diseño y/o codigo, por favor citalo como se ve a continuación."
+authors:
+  - family-names: "Andrango"
+    given-names: "Damián"
+    affiliation: "Yachay Tech University"
+  - family-names: "Calderon"
+    given-names: "Sebastian"
+  - family-names: "asdf"
+    given-names: "Jhon"
+title: "Repositorio de Instrumentación Óptica: Telescopio y Espectrofluorómetro"
+version: 1.0.3
+date-released: 2026-02-22
+url: "https://github.com/mdam21/optica_2026_general"

@@ -1,0 +1,462 @@
+\section{Introducción al Diseño CAD}
+
+El diseño asistido por computadora (CAD, por sus siglas en inglés) es una herramienta que permite representar objetos en dos o tres dimensiones de forma precisa. Es el paso previo a la construcción física de cualquier prototipo, ya que nos da la posibilidad de visualizar, ajustar y mejorar nuestro diseño sin necesidad de materializarlo.
+
+Modelar en 3D no solo ayuda a entender mejor la geometría del objeto que queremos fabricar, también facilita organizar sus partes, anticipar problemas y proponer soluciones. Además, tener un modelo tridimensional nos permite hacer presentaciones más claras, experimentar con distintas versiones (añadir o quitar elementos), y todo esto de forma digital, lo cual reduce tiempo y recursos.
+
+En este taller, usaremos CAD para diseñar un telescopio completo desde cero, y aprovechar esa base para preparar piezas listas para impresión 3D o corte láser.
+
+\subsection{Mentalidad de diseño CAD}
+
+A grandes rasgos, cualquier objeto se puede construir partiendo de un cubo sólido. Basta con quitar esquinas, hacer huecos y agregar elementos para ir dando forma a lo que queremos. Esta es una forma útil de visualizar el proceso de modelado: pensar primero en lo más simple y luego ir sumando o restando.
+
+Los softwares de modelado CAD trabajan con geometrías precisas que, en algunos casos, también pueden convertirse en mallas útiles para simulaciones o análisis. Sin embargo, para efectos prácticos de prototipado, lo más importante es tener control sobre las dimensiones y la relación entre piezas.
+
+El enfoque principal al modelar es **dividir el objeto en partes simples**. Esto permite trabajar con mayor control, precisión y flexibilidad. Por ejemplo, en el diseño de un telescopio, conviene separar el tubo principal, el enfocador, las tapas, las bases, etc., y trabajar cada parte por separado. Luego, se pueden ensamblar tomando como referencia sus puntos de unión. Esto permite no solo coordinar mejor el diseño en grupo, sino también facilitar futuras modificaciones.
+
+Pensar en términos de "piezas individuales que luego se unen" es la mentalidad CAD más efectiva.
+
+
+\subsection{Introducción a SolidWorks y software CAD similares}
+
+Existen varios softwares de modelado CAD, algunos más complejos que otros sin embargo la complejidad está relacionada con la curva de aprendizaje. Es decir, aprendiendo las partes básicas de un modelo, ensamble, se puede ir aumentando fácilmente la complejidad junto con la cantidad de features que se pueden utilizar en el programa. Existen otros softwares similares, Fusion 360, Inventor, FreeCAD, cada uno de ellos con sus limitaciones. 
+Uno de los más relevantes en general es FreeCAD, por su distribución gratuita, es decir, es sofwtare libre. Esto tiene sus ventajas y desventajas, puesto que no permite que haya desarrolladores que ganen un sueldo directo, sino más bien es la comunidad, con tiempo libre, quienes se encargan de realizar features. Esto, como se entenderá, es un gran costo para las funcionalidades, sin embargo, el programa ha ido mejorando su ambiente UI, por lo que se recomienda indagar más sobre el programa. 
+
+La importancia de conceptos comunes, es decir, conceptos paramétricos son necesarios para... ?? continuar
+
+\section{Principios Geométricos Básicos}
+
+Antes de modelar cualquier objeto, es necesario tener claros algunos conceptos geométricos simples. Aunque suene básico, entender bien cosas como líneas, ángulos y relaciones entre figuras es lo que nos permite construir modelos correctos y funcionales.
+
+El diseño técnico que muchos vimos en el colegio no fue en vano: aquí es donde cobra sentido. Saber ubicar bien un punto, definir un ángulo, o reconocer cuándo una línea es paralela o perpendicular a otra, marca la diferencia al momento de crear piezas bien estructuradas.
+
+En las siguientes secciones repasaremos los elementos geométricos más importantes, y cómo se aplican en SolidWorks para construir un telescopio desde cero.
+
+
+\subsection{Elementos básicos}
+
+Todos sabemos que un punto es un objeto unidimensional, una línea es bidimensional y un cubo es tridimensional. Esto está directamente relacionado con los planos necesarios para construir esas formas. En ciencias exactas se trabaja constantemente con representaciones en 2D y 3D, así que estos conceptos no deberían ser totalmente nuevos.
+
+Un **plano**, al igual que una línea, es un objeto bidimensional. Podemos imaginarlo como una hoja de papel infinita sobre la cual se puede dibujar cualquier cosa: líneas, círculos, figuras. En CAD, usamos planos para iniciar cualquier boceto. Por defecto, todo modelo comienza en uno de los planos principales: **frontal**, **superior** o **lateral**.
+
+Una gran ventaja de los softwares CAD es que podemos **crear planos personalizados**, como planos tangentes a una superficie o equidistantes entre dos caras. Esto es muy útil cuando queremos diseñar una pieza que se acople con otra, o que esté alineada según una geometría no plana.
+
+La mayoría de programas CAD usa el sistema de coordenadas **cartesiano tridimensional (X, Y, Z)**. Es el más común porque permite ubicar cualquier punto en el espacio. Aun así, en ciertos casos (como piezas cilíndricas o simétricas) puede ser útil pensar en coordenadas polares o referencias angulares. Pero, por defecto, todo parte desde el eje cartesiano, y eso es lo que más usaremos en este taller.
+
+
+
+\subsection{Ángulos y trigonometría básica}
+
+Como mencionamos antes, muchos de los sólidos que forman estructuras complejas (como los sólidos platónicos) requieren geometrías bien definidas. Para lograr eso en CAD, es fundamental entender cómo se relacionan los ángulos entre las figuras.
+
+Una forma simple de explorar esto es con un **triángulo**, la figura más básica que permite controlar ángulos de forma precisa. A partir de triángulos, podemos construir muchas otras formas, controlar inclinaciones, y definir con exactitud cómo se conectan dos líneas o superficies.
+
+En SolidWorks, algo sencillo que podemos hacer es:
+- Dibujar un triángulo con líneas en un sketch.
+- Aplicar **relaciones geométricas** como "igual", "horizontal" o "perpendicular".
+- Usar **cotas angulares** para definir el ángulo entre dos líneas.
+
+Esto no solo ayuda a construir piezas con precisión, sino que también permite mantener simetrías o repetir formas cuando usamos patrones o revoluciones. La trigonometría básica (seno, coseno, tangente) se vuelve útil cuando, por ejemplo, queremos calcular la inclinación de una rampa, la posición de una perforación inclinada, o el ángulo entre partes móviles.
+
+Durante el taller, veremos ejemplos como estos para que quede claro cómo se aplica esto al diseño del telescopio.
+
+
+
+\subsection{Restricciones geométricas y transformaciones}
+
+En CAD, uno de los pilares del modelado paramétrico son las **restricciones geométricas**. Estas permiten controlar cómo se comportan las figuras al modificar sus dimensiones o relaciones. Algunas de las más comunes son:
+
+- **Paralelo**: dos líneas siempre mantienen la misma dirección.
+- **Perpendicular**: forman un ángulo recto (90°).
+- **Coincidente**: un punto cae exactamente sobre una línea, arco o punto.
+- **Concéntrico**: dos círculos o arcos comparten el mismo centro.
+- **Colineal**: dos o más segmentos se alinean como si fueran uno solo.
+
+Estas restricciones son clave para que una pieza mantenga su forma al modificar dimensiones. Por ejemplo, si una tapa de telescopio debe mantenerse centrada respecto al tubo, se puede aplicar una restricción concéntrica entre sus círculos.
+
+Por otro lado, también trabajamos con **transformaciones**: operaciones como mover, rotar o reflejar partes del modelo. Lo más recomendable es que el **origen (0,0,0)** esté centrado en el objeto para facilitar movimientos y ensamblajes, aunque no siempre es obligatorio.
+
+Las rotaciones se realizan normalmente respecto a uno de los ejes principales (X, Y, Z), pero también se pueden crear **ejes personalizados**, lo cual es útil cuando se trabaja con geometrías inclinadas o asimétricas. Estas transformaciones también se usan para crear copias (patrones lineales o circulares), algo que será útil más adelante cuando diseñemos soportes o estructuras repetitivas del telescopio.
+
+
+
+\section{Interfaz Esencial de SolidWorks}
+
+Entrando en materia, SolidWorks es un programa bastante completo y muy útil en la etapa de diseño y prototipado. Está pensado tanto para uso industrial como académico, y permite crear desde piezas simples hasta ensambles complejos.
+
+El programa completo puede llegar a costar varios cientos (o miles) de dólares, dependiendo de la licencia y los módulos incluidos. Algunos de estos complementos permiten realizar análisis avanzados, como simulaciones de inyección de plástico en moldes, estudios térmicos o incluso análisis de vibraciones en estructuras que se usarán en el espacio.
+
+Una muestra clara del potencial de SolidWorks aparece al inicio: mientras se carga el programa, se suelen mostrar proyectos reales construidos con esta herramienta, capa por capa. Desde bicicletas eléctricas hasta satélites funcionales.
+
+En este taller, nos enfocaremos solo en la parte más esencial de la interfaz: cómo navegar, crear bocetos, aplicar operaciones básicas y ensamblar piezas. Esa será nuestra base para construir el telescopio.
+
+
+\subsection{Herramientas básicas de interfaz}
+
+SolidWorks está organizado en distintas áreas, cada una pensada para controlar un aspecto del diseño: desde el dibujo inicial hasta operaciones de extrusión, ensamblaje o análisis. Familiarizarse con esta interfaz es clave para no perderse mientras modelamos.
+
+\paragraph{Barra de menú superior}
+
+Es la barra clásica de cualquier software. Aquí están los accesos a funciones generales como abrir, guardar, importar, exportar y configurar el entorno. También incluye herramientas menos usadas pero útiles como macros, complementos y referencias externas.
+
+\paragraph{Command Manager}
+
+Es el corazón de las herramientas CAD. Se encuentra justo debajo de la barra de menú y cambia según el contexto (Sketch, Features, Assembly, etc.). Desde aquí se lanzan todas las operaciones: crear bocetos, extruir, cortar, hacer patrones, aplicar redondeos, y más.
+
+\paragraph{Feature Manager (Design Tree)}
+
+También conocido como el "árbol de diseño". Está ubicado a la izquierda y muestra de forma ordenada cada operación que se ha hecho sobre la pieza o ensamble. Permite editar rápidamente una extrusión, suprimir algo temporalmente, o reorganizar pasos.
+
+\paragraph{Área gráfica (Graphics area)}
+
+Es el espacio central donde se dibujan y manipulan las piezas en 2D y 3D. Aquí se visualiza el modelo, se seleccionan caras, se aplican cotas, y se pueden girar, mover o hacer zoom sobre el diseño.
+
+
+
+
+\subsection{Navegación básica del modelo}
+
+Al igual que en muchos otros programas 3D (incluidos algunos videojuegos), SolidWorks permite navegar por el modelo con el mouse de forma intuitiva:
+
+\begin{itemize}
+	\item **Rotar**: clic y mantener presionado el botón central del mouse (scroll), luego mover el mouse.
+	\item **Zoom**: girar la rueda del mouse hacia adelante o atrás.
+	\item **Desplazar (pan)**: mantener presionado \texttt{Ctrl} + botón central del mouse y mover el cursor.
+\end{itemize}
+
+También existen **vistas estándar** (frontal, lateral, superior, isométrica, etc.) que se pueden acceder presionando la **barra espaciadora**. Esto abre una ventana de selección visual que permite ver el modelo desde cualquier perspectiva importante.
+
+Además, podemos hacer clic derecho sobre una cara del modelo y seleccionar "Normal To" para orientar la cámara perpendicular a esa cara, lo que es útil al trabajar sobre planos inclinados o complejos.
+
+Estas herramientas nos permiten movernos con libertad dentro del espacio tridimensional del modelo, como si estuviéramos observando un objeto suspendido en una caja invisible.
+
+
+
+\subsection{Árbol de diseño (Feature Manager)}
+
+El Árbol de diseño está conformado por el historial de las distintas etapas que hemos realizado en cualquier objeto que estemos modelando. Es decir, si empezamos con un cuadrado, luego extruido, estará en el árbol de diseño, permitiéndonos entender cómo va evolucionando las distintas etapas del diseño. Por ejemplo, si se quiere hacer un cuadrado con un cilidro hueco siempre se debe buscar elegir el centro del objeto, para partir desde el origen de coordenadas. 
+Existen operaciones padres e hijas, por ejemplo, una extrusión es una operación hija de la creación de cualquier objeto en un plano. Las operaciones padre, son por así decirlo, el plano dibujado sobre la cara del objeto sobre el cual queremos realizar la operación, sea extruir o hacer un corte de alguna cosa en particular. 
+
+
+\section{Flujo de Trabajo CAD para Telescopios}
+
+Enfocándonos en la creación de telescopios, tenemos varias partes clave. Desde el inicio, sabemos que el corazón de un telescopio es su sistema óptico: ya sea con espejos (como en un reflector) o lentes (como en un refractor). Sin embargo, para modelarlo en CAD debemos pensar también en su estructura física: el tubo, las tapas, el enfocador, los soportes, y en muchos casos, piezas personalizadas que faciliten su montaje o alineación.
+
+El flujo de trabajo que proponemos aquí nos permite ir paso a paso, construyendo el telescopio como un conjunto organizado de piezas.
+
+\subsection{Definición del problema de diseño}
+
+Antes de empezar a dibujar, lo primero es **definir qué tipo de telescopio vamos a modelar**. Esto implica identificar las piezas clave que debemos incluir. Por ejemplo:
+
+\begin{itemize}
+	\item Tubo principal
+	\item Porta ocular (enfocador)
+	\item Lentes o espejos (elementos ópticos)
+	\item Montura base (o soporte)
+	\item Adaptadores o anillos de fijación
+\end{itemize}
+
+En esta etapa también es útil pensar en las **dimensiones generales** del telescopio: largo del tubo, diámetros, grosor del material, etc. Incluso si luego se ajustan, tener una idea inicial ayuda a organizar mejor el diseño.
+
+\subsection{Descomposición geométrica del telescopio}
+
+Una vez claro lo que se necesita, se debe **traducir cada parte a formas geométricas simples**. Esta es una de las habilidades clave en diseño CAD.
+
+Por ejemplo:
+\begin{itemize}
+	\item El tubo del telescopio → un cilindro hueco
+	\item El lente o espejo → un disco (macizo o delgado)
+	\item Las tapas → cilindros sólidos con ajuste
+	\item Las patas o montura → bloques, placas o perfiles combinados
+\end{itemize}
+
+Esta descomposición permite planificar el modelado y decidir con qué piezas empezar. También ayuda a asignar bocetos a planos adecuados y prever uniones o ensamblajes entre piezas.
+
+\subsection{Construcción gradual del modelo}
+
+La construcción del telescopio en CAD sigue una secuencia lógica:
+
+\begin{itemize}
+	\item \textbf{1. Boceto 2D (Sketch)}: se dibuja la base de una forma (por ejemplo, un círculo para el tubo).
+	\item \textbf{2. Operación 3D}: se convierte el boceto en volumen mediante una extrusión, revolución u otra operación.
+	\item \textbf{3. Ensamblaje}: se importan las distintas piezas y se colocan en su posición final, unidas con restricciones (mates).
+\end{itemize}
+
+Cada pieza se puede trabajar por separado y luego ensamblar, o incluso construir en contextos dentro del ensamblaje si hace falta que una pieza se adapte directamente a otra. En ambos casos, mantener orden en el árbol de diseño y usar nombres claros ayuda mucho.
+
+
+
+\section{Bocetos 2D (Sketches)}
+
+En SolidWorks, todo modelo tridimensional parte de un boceto en dos dimensiones. Estos bocetos se dibujan sobre un plano (o una cara) y definen la base de cualquier operación 3D como una extrusión, una revolución o un corte.
+
+\subsection{Conceptos iniciales}
+
+Los bocetos se dibujan sobre planos. SolidWorks viene con tres planos predeterminados:
+
+\begin{itemize}
+	\item \textbf{Front Plane} (vista frontal)
+	\item \textbf{Top Plane} (vista superior)
+	\item \textbf{Right Plane} (vista lateral)
+\end{itemize}
+
+Estos planos representan los ejes principales del sistema de coordenadas. También es posible crear planos nuevos si necesitamos dibujar sobre una geometría inclinada, desplazada o tangente a una superficie curva. Esto será útil más adelante cuando empecemos a trabajar en el enfocador o los adaptadores.
+
+\subsection{Herramientas básicas de boceto}
+
+Al crear un boceto, tenemos acceso a una serie de herramientas simples que permiten construir cualquier forma. Algunas de las más usadas son:
+
+\begin{itemize}
+	\item \textbf{Línea}, \textbf{círculo}, \textbf{rectángulo}, \textbf{arco}, \textbf{polígono}
+	\item \textbf{Spline}: para curvas suaves y formas orgánicas
+	\item \textbf{Líneas constructivas}: líneas guía que no forman parte del sólido, pero ayudan a centrar o alinear
+\end{itemize}
+
+Estas herramientas permiten construir la base de cualquier pieza: desde un tubo óptico hasta una abrazadera, todo puede partir de combinaciones de estas formas.
+
+\subsection{Relaciones geométricas esenciales}
+
+Una vez dibujadas las figuras, es importante aplicar \textbf{relaciones} para definir cómo interactúan los elementos entre sí. Algunas de las más comunes son:
+
+\begin{itemize}
+	\item \textbf{Coincidente}: un punto cae sobre una línea o arco
+	\item \textbf{Tangente}: una línea toca un arco sin cortarlo
+	\item \textbf{Paralelo}, \textbf{perpendicular}, \textbf{igual}, \textbf{horizontal}, \textbf{vertical}
+\end{itemize}
+
+Estas relaciones ayudan a mantener la geometría estable cuando se modifican dimensiones o posiciones.
+
+\subsection{Cotas inteligentes}
+
+Por último, las \textbf{cotas inteligentes} permiten asignar dimensiones reales a las figuras. Podemos definir:
+
+\begin{itemize}
+	\item Longitudes de líneas
+	\item Diámetros de círculos
+	\item Ángulos entre líneas
+	\item Distancias entre puntos, líneas o caras
+\end{itemize}
+
+Un \textbf{boceto completamente definido} (en negro) es aquel que tiene todas sus relaciones y cotas necesarias. Evitar bocetos "subdefinidos" (azules) es importante para que las piezas no cambien de forma accidental al modificar algo.
+
+\subsection{Práctica rápida}
+
+Como ejercicio práctico, se puede hacer la sección transversal de un tubo óptico:
+
+\begin{itemize}
+	\item Dibujar dos círculos concéntricos (usando restricción \textbf{concéntrica})
+	\item Acotar el diámetro interior y exterior
+	\item Añadir una línea constructiva para marcar el eje horizontal
+	\item Usar el origen como centro de ambos círculos
+\end{itemize}
+
+Este será el primer paso para crear el cuerpo principal del telescopio.
+
+\section{Operaciones 3D Fundamentales para Telescopios}
+
+Una vez que tenemos nuestros bocetos bien definidos, pasamos a convertirlos en piezas tridimensionales mediante operaciones 3D. Estas herramientas son las que dan volumen y permiten empezar a construir físicamente el telescopio en CAD.
+
+\subsection{Extrusiones básicas}
+
+La operación más directa es la \textbf{extrusión}. A partir de un boceto (por ejemplo, un círculo), podemos generar un sólido al darle una altura.
+
+En telescopios, esta operación sirve para crear:
+
+\begin{itemize}
+	\item Tubos principales (extruyendo un anillo)
+	\item Adaptadores o anillos de fijación
+	\item Bases planas o placas de soporte
+\end{itemize}
+
+Se puede extruir hacia un lado o ambos, e incluso controlar si queremos dejar una pared hueca (ideal para tubos).
+
+\subsection{Revoluciones básicas}
+
+La \textbf{revolución} permite crear piezas simétricas girando un perfil 2D alrededor de un eje. Esto es útil para formas redondeadas que no se pueden obtener fácilmente con una extrusión.
+
+Ejemplos típicos para telescopios:
+
+\begin{itemize}
+	\item Soportes cilíndricos con rebajes
+	\item Abrazaderas
+	\item Modelado base de un espejo parabólico (en su versión simplificada)
+\end{itemize}
+
+Solo se necesita dibujar la mitad de la sección transversal y especificar el eje de giro.
+
+\subsection{Operaciones de corte}
+
+Así como podemos extruir un sólido, también podemos \textbf{cortar} dentro de él. Esto se hace con:
+
+\begin{itemize}
+	\item \textbf{Corte por extrusión}: para perforaciones rectas o rebajes.
+	\item \textbf{Corte por revolución}: para huecos simétricos, como el de un ocular.
+\end{itemize}
+
+Estas herramientas son esenciales para crear roscas, canales o huecos para tornillos y lentes.
+
+\subsection{Redondeos y chaflanes}
+
+Las aristas vivas pueden ser problemáticas en la impresión 3D o durante el uso del telescopio. Por eso, se recomienda usar:
+
+\begin{itemize}
+	\item \textbf{Redondeo (fillet)}: suaviza bordes con curvas.
+	\item \textbf{Chaflán (chamfer)}: crea cortes angulados en las esquinas.
+\end{itemize}
+
+Ambos mejoran la apariencia y funcionalidad de las piezas, además de evitar roturas o zonas de acumulación de material.
+
+\subsection{Patrones circulares y lineales}
+
+Estas herramientas permiten repetir una operación varias veces, de forma ordenada:
+
+\begin{itemize}
+	\item \textbf{Patrón lineal}: útil para crear filas de orificios o nervaduras.
+	\item \textbf{Patrón circular}: ideal para distribuir simétricamente tornillos alrededor de un eje (como en una tapa o brida).
+\end{itemize}
+
+Usar patrones ahorra tiempo y mantiene consistencia en el diseño.
+
+\subsection{Ejercicios prácticos}
+
+\begin{itemize}
+	\item Crear un tubo óptico extruyendo dos círculos concéntricos (cuerpo principal del telescopio).
+	\item Hacer un adaptador para el ocular usando revolución de un perfil simple.
+	\item Agregar cortes de fijación (tipo slots) y redondeos para suavizar los bordes.
+\end{itemize}
+
+\section{Ensamblajes Básicos de Telescopios}
+
+Una vez que tenemos nuestras piezas modeladas por separado, pasamos a la etapa de ensamblaje. Esta fase permite ver cómo encajan, se relacionan entre sí, y si hay interferencias o errores. SolidWorks permite crear ensamblajes muy precisos, útiles tanto para visualización como para fabricación.
+
+\subsection{Inserción y posicionamiento de piezas}
+
+Para comenzar un ensamblaje, se crea un nuevo archivo de tipo \texttt{Assembly (*.SLDASM)}. Desde ahí se insertan las piezas previamente diseñadas (\texttt{Insert Components}).
+
+Una vez insertadas, se posicionan usando \textbf{relaciones} (mates), que permiten definir cómo interactúan las partes:
+
+\begin{itemize}
+	\item \textbf{Concéntrica}: alinea ejes (ideal para tubos, tornillos, lentes).
+	\item \textbf{Coincidente}: alinea caras planas (como bases, soportes).
+	\item \textbf{Distancia}: fija un espacio entre piezas (útil para separadores).
+	\item \textbf{Ángulo}: define inclinaciones si fuera necesario.
+\end{itemize}
+
+Siempre es buena idea fijar una pieza al origen del ensamblaje (usualmente el tubo principal), para que las demás giren y se alineen en torno a ella.
+
+\subsection{Ejemplo de ensamblaje}
+
+Un ejemplo típico en este taller sería ensamblar:
+
+\begin{itemize}
+	\item Un tubo principal (fijo al origen)
+	\item Un espejo o lente colocado en el extremo (relación coincidente)
+	\item Un soporte o anillo de fijación (concéntrico + distancia fija)
+\end{itemize}
+
+Este ejemplo muestra cómo las relaciones geométricas reemplazan la necesidad de medir manualmente cada unión. Además, si modificas el modelo base, el ensamblaje se actualiza automáticamente.
+
+\subsection{Acotado de piezas}
+
+Dentro del ensamblaje también se pueden aplicar \textbf{cotas inteligentes}, especialmente si queremos generar planos técnicos o especificaciones para fabricación.
+
+Estas cotas no modifican el modelo directamente, pero sirven para documentar:
+
+\begin{itemize}
+	\item Longitudes entre piezas
+	\item Posiciones relativas
+	\item Distancias de montaje
+\end{itemize}
+
+Las vistas acotadas son fundamentales para producir planos físicos o explicar el diseño a alguien más.
+
+\subsection{Exportación}
+
+Una vez que el modelo está listo, hay varias formas de exportarlo:
+
+\begin{itemize}
+	\item \textbf{Planos 2D en PDF o DWG}: útiles para corte láser o fabricación manual.
+	\item \textbf{Capturas en alta resolución}: para presentaciones o documentación.
+	\item \textbf{STL}: para impresión 3D (esto se hace desde cada pieza).
+\end{itemize}
+
+Es recomendable mantener organizados los archivos en carpetas, y si se va a compartir el proyecto, usar la función \texttt{Pack and Go}, que incluye todas las piezas sin perder rutas.
+
+
+\section{Consejos para Fabricación con Impresión 3D}
+
+Una vez terminado el modelo, si el objetivo es imprimirlo en 3D, hay varios factores que deben tomarse en cuenta para evitar errores o fallos durante la impresión.
+
+\subsection{Preparación del modelo}
+
+Antes de exportar, revisa lo siguiente:
+
+\begin{itemize}
+	\item \textbf{Inclinación}: evita paredes demasiado inclinadas sin soporte, ya que generarán errores o estructuras innecesarias de soporte.
+	\item \textbf{Grosor mínimo}: asegúrate de que todas las paredes tengan un grosor suficiente (generalmente mayor a 1.2 mm) para ser impresas sin romperse.
+	\item \textbf{Orientación}: orienta la pieza en la dirección más estable (eje Z) para facilitar el proceso y ahorrar material.
+\end{itemize}
+
+También se recomienda aplicar \textbf{chaflanes o redondeos} en las esquinas para mejorar el acabado final y reducir acumulación de material.
+
+\subsection{Alternativas prácticas}
+
+No todas las piezas necesitan imprimirse. Algunas se pueden fabricar con materiales más simples o baratos, como:
+
+\begin{itemize}
+	\item \textbf{Tubo principal}: puede ser un tubo de PVC cortado a medida.
+	\item \textbf{Base o soporte}: madera contrachapada cortada con herramientas simples o con corte láser.
+	\item \textbf{Anillos o abrazaderas}: se pueden imprimir o construir con piezas de metal doblado o sujetadores reciclados.
+\end{itemize}
+
+La idea es usar el CAD no solo para imprimir, sino como una guía de cómo construir el telescopio con materiales accesibles.
+
+\subsection{Exportación a STL}
+
+Para imprimir una pieza:
+
+\begin{itemize}
+	\item Abre el archivo de la pieza individual (\texttt{.SLDPRT}).
+	\item Selecciona \texttt{Guardar como...} y elige el formato \texttt{STL (*.stl)}.
+	\item Antes de guardar, ajusta los parámetros de resolución si quieres mayor calidad.
+	\item Asegúrate de que las unidades estén correctas (mm, por defecto).
+\end{itemize}
+
+Recomendación: siempre revisa el archivo STL en un programa como Cura o PrusaSlicer antes de mandarlo a imprimir.
+
+\section{Preguntas y Revisión Final}
+
+Esta última parte del taller está abierta a resolver cualquier duda, revisar errores comunes que puedan surgir durante el modelado, y reforzar conceptos clave como:
+
+\begin{itemize}
+	\item Cómo empezar desde el origen
+	\item Qué hacer si una pieza no se ensambla bien
+	\item Cómo mejorar el acabado para impresión 3D
+	\item Cómo exportar planos para presentación o fabricación
+\end{itemize}
+
+También puedes compartir tus modelos o pedir retroalimentación si ya tienes una idea avanzada o piezas listas para imprimir.
+
+
+%
+%\begin{itemize}
+%	\item Espacio abierto para dudas.
+%	\item Revisión rápida del contenido cubierto.
+%\end{itemize}
+
+%\section*{Anexo: Matemáticas en el Diseño}
+
+%\subsection*{Matemáticas básicas-medias requeridas}
+%\begin{itemize}
+%	\item Bocetos 2D con cotas.
+%	\item Operaciones de revolución (ángulos, radios, diámetros).
+%	\item Distribuciones angulares (patrones circulares).
+%\end{itemize}
+
+%\subsection*{Posibles temas de clase avanzada}
+%\begin{itemize}
+%	\item Cálculo de parábolas para espejos.
+%	\item Simulación óptica avanzada.
+%	\item Modelado paramétrico con ecuaciones.
+%	\item Análisis estructural (FEM).
+%\end{itemize}
