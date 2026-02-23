@@ -1,0 +1,14 @@
+# Forzar que los archivos de texto siempre se normalicen a LF en el repo
+* text=auto
+
+# Asegurar que los archivos de LaTeX y código mantengan consistencia
+*.tex text
+*.bib text
+*.py text
+*.md text
+
+# Marcar archivos binarios (estos no se tocan)
+*.pdf binary
+*.jpg binary
+*.png binary
+*.stl binary
