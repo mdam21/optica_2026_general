@@ -5,7 +5,7 @@ Este repsotiorio contiene el desarrollo integral de un telescopio y un espectrof
 ## Hardware y Diseño
 Los modelos y ensamblajes están originalmente desarrollados en **Solidworks**, sin embargo se busca migrar a una **OneShape**. 
 Se puede acceder a los modelos aquí:
-www.holaquehace.com
+www.olakease.com
 
 ## Autoría y Propiedad Intelectual
 Este proyecto es propiedad intelectual de:
