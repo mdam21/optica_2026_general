@@ -3,6 +3,7 @@
 Este repsotiorio contiene el desarrollo integral de un telescopio y un espectrofluorómetro, inclcuyendo todos los archivos necesarios para dar fin a este objetivo. Así mismo como sugerencias de materiales y posibles futuras mejoras. Además se añade el apartado de teoría donde se fundamentará teóricamente todos los talleres para entender a profundidad las actividades que se realizará. 
 
 ## Estructura del proyecto
+```
 /
 ├── hardware/
 │   ├── telescopio/
@@ -19,6 +20,7 @@ Este repsotiorio contiene el desarrollo integral de un telescopio y un espectrof
 ├── theory/                # Documentación teórica y principios físicos
 ├── guides/                # Guías de usuario y protocolos de laboratorio
 └── README.md              # El "mapa" general del proyecto
+```
 
 ## Hardware y Diseño
 Los modelos y ensamblajes están originalmente desarrollados en **Solidworks**, sin embargo se busca migrar a una **OneShape**. 
