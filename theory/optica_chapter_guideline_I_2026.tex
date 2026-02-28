@@ -2,7 +2,7 @@
 \documentclass[12pt, twoside]{book}
 
 %%%%%%%% Preamble %%%%%%%%%%%%
-\title{Guía de Armado de Telescopios}
+\title{Guía Teórico-Práctica Optica Chapter YT}
 \usepackage[utf8]{inputenc}
 \usepackage[greek, spanish, es-noindentfirst, es-nolists, es-noshorthands]{babel}
 \usepackage{amsmath}
@@ -62,7 +62,7 @@
 }
 
 \fancyhead[RE,LO]{\textcolor{blue!80!black}{%
-		\footnotesize Guía de Armado de Telescopios | \leftmark%
+		\footnotesize Guía Teórica/Práctica de Óptica | \leftmark%
 }}
 
 % Estilos de títulos
@@ -74,7 +74,7 @@
 
 
 \fancyhf{}
-\fancyhead[LE,RO]{\footnotesize Guía de Armado de Telescopios}
+\fancyhead[LE,RO]{\footnotesize Guía Teórica/Práctica de Óptica}
 \fancyhead[RE,LO]{\footnotesize Optica Chapter - YT}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -121,18 +121,24 @@
 		\end{figure}
 		\vspace*{1cm}
 		
-		{\mymaintitlesize\textbf{Guía Práctica de Armado de Telescopios}}\\
+		{\mymaintitlesize\textbf{Optica Chapter Yachay Tech - Theory - Documentation}}\\
 		\vspace{1cm}
-		{\mysubtitlesize\textbf{Curso de Óptica Experimental y Técnicas de Observación}}\\
+		{\mysubtitlesize\textbf{Guía general de Óptica Aplicada}}\\
 		\vspace{2cm}
 		{\mysubtitlesize\textbf{Instructor:}\\
-			Damian Andrango - Físico\\
+			Damian Andrango\\
+			Sebastián Calderón \\
+			Jhon\\
+			\vspace{1cm}
+			\mysubtitlesize\textbf{Advisor:}\\
+			Andrey Mereshchenkov\\
 			\vspace{1cm}
 			\textbf{Edición:}\\
-			Abril 2024\\
+			Primer Periodo 2026\\
 			\vspace{1cm}
 			\textbf{Duración del curso:}\\
-			20 horas teórico-prácticas}
+			-}
+		
 	\end{center}
 	\clearpage
 	
@@ -150,7 +156,7 @@
 	
 	
 	
-	\section*{Introducción}
+	\section*{Introducción al Documento}
 	
 	Este documento constituye una guía teórico-práctica que acompañará el desarrollo del taller de prototipado de dispositivos ópticos, enfocado en el diseño y construcción de telescopios y espectrómetros.
 	La propuesta integra la aplicación de varios Objetivos de Desarrollo Sostenible (ODS) establecidos por la ONU, buscando vincular la ciencia con la educación, la innovación y la equidad social. En particular, se abordan los siguientes objetivos:
@@ -163,30 +169,40 @@
 	\end{itemize}
 	
 	\section*{Propósito del taller}
-	El taller busca fomentar el desarrollo de prototipos ópticos de bajo costo, utilizando herramientas digitales como impresión 3D, corte láser y diseño paramétrico.
-	Esta iniciativa nace desde el Capítulo de Óptica de la Universidad Yachay Tech, con el propósito de diseñar y fabricar instrumentos accesibles para entornos económicamente limitados —como escuelas rurales o comunidades con recursos reducidos—.
-	Además de construir dispositivos funcionales, se pretende generar capacidades locales, promoviendo la autogestión tecnológica y acercando la ciencia a más personas.
 	
-	Durante el curso, los participantes no solo comprenderán cómo funcionan los telescopios y espectrómetros, sino que también aprenderán a crear sus propios dispositivos desde cero, combinando principios científicos con creatividad e innovación.
+	Tanto la guía, como los talleres buscan fomentar el desarrollo de prototipos ópticos de bajo costo, utilizando herramientas digitales de diseño paramétrico para hacer uso de tecnologías de fabricación aditiva (impresión 3d) o uso de programas para vectorizados para realizar cortes láser en distintos materiales.
+	
+	Esta iniciativa nace desde el Capítulo de Óptica de la Universidad Politécnica Nacional, siendo la Universidad Yachay Tech la que da continuidad del proyecto, con el propósito de diseñar y fabricar instrumentos accesibles para entornos económicamente limitados —como escuelas rurales o comunidades con recursos reducidos—.
+	Además de construir dispositivos funcionales, se pretende generar capacidades locales, promoviendo la autogestión tecnológica y acercando la ciencia a más personas. 
+	
+	Durante el curso, los participantes no solo comprenderán cómo funcionan los telescopios y espectrómetros y demás dispositivos ópticos\footnote{tecnologías que se ocupan diario}, sino que también aprenderán a crear sus propios dispositivos desde cero, combinando principios científicos con creatividad e innovación, fomentando la participación de estudiantes, en distintos niveles, en carreras STEM.
 	
 	\section*{Estructura del curso}
+	
 	Cada módulo está diseñado para desarrollarse en sesiones de 2 a 2,5 horas, combinando explicaciones conceptuales, demostraciones prácticas y actividades de construcción.
-	Al finalizar el curso, cada participante —individualmente o en grupo— contará con un prototipo funcional, adaptado a sus ideas, objetivos y materiales disponibles.
+	Al finalizar el curso, cada participante contará con un prototipo funcional, adaptado a sus ideas, objetivos y materiales disponibles para poder prototipar un dispositivo óptico.
 	
 	El taller empleará principalmente las siguientes herramientas:
 	
 	\begin{itemize}
-		\item \textbf{SolidWorks} para el diseño paramétrico y modelado 3D.
+		\item \textbf{SolidWorks - OneShape} para el diseño paramétrico y modelado 3D.
 		\item \textbf{Inkscape} para la elaboración de gráficos vectoriales y piezas cortables.
 		\item \textbf{Ultimaker Cura} para la preparación de archivos de impresión 3D.
 	\end{itemize}
 	
-	Estas aplicaciones fueron seleccionadas por su curva de aprendizaje accesible, lo que permitirá que los participantes adquieran habilidades básicas de prototipado digital sin requerir experiencia previa. Finalmente se incluirá módulos más avanzados y otros programas/aplicativos para realizar objetos más sencillos/útiles.
+	Estas aplicaciones fueron seleccionadas por su curva de aprendizaje accesible, lo que permitirá que los participantes adquieran habilidades básicas de prototipado digital sin requerir experiencia previa. Finalmente se incluirá módulos más avanzados y otros programas/aplicativos para realizar objetos de maneras más sencillas/útiles.
 	
 	\section*{Materiales y recursos}
+	
 	Para la construcción de los telescopios será necesario disponer de espejos u oculares, filamento para impresión 3D, tubos de PVC, maderas u otros materiales estructurales.
 	En el caso de los espectrómetros, se requerirá al menos un sensor óptico o cámara y algunos componentes electrónicos básicos.
 	Durante las primeras sesiones, se definirá en conjunto qué materiales se utilizarán y cómo acceder a ellos, priorizando siempre opciones que puedan ser recicladas u opciones de bajo costo con materiales disponibles localmente. Igualmente, de ser necesario utilizar algunas herramientas se buscará soluciones viables mediante colaboraciones universitarias o compras con envío internacional de corto plazo.
+	
+	Algunas de lass colaboraciones para las participaciones en las escuelas/colegios se llevará a cabo con el grupo Astrociencias Ec\footnote{Grupo de divulgación de Ciencias Exactas a nivel Ecuador - Representante legal grupo sierra-norte: Damián Andrango}. 
+	
+	\chapter{Optica Introduction}
+	\label{optica_fundamentals}
+	\input{modules/modulo00}
 	
 	\chapter{Telescopios}
 	\label{chapter_telescopes}

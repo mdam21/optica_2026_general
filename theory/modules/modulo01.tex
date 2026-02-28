@@ -29,7 +29,7 @@ Gracias a estas observaciones, Galileo obtuvo evidencias a favor de la teoría c
 
 El término \textbf{telescopio} abarca una amplia variedad de dispositivos: radiotelescopios, telescopios infrarrojos y ultravioletas, así como \textbf{telescopios ópticos}. En este documento nos enfocaremos en estos últimos, por ser los más comunes y accesibles, ideales para introducirse en el mundo de la observación astronómica.
 
-Esta guía forma parte del minicurso organizado por la Comisión de Creación de Telescopios del Capítulo de Óptica de Yachay Tech, realizado en abril de 2024.
+
 
 \subsection*{Breve historia del telescopio}
 
@@ -48,15 +48,15 @@ Con el tiempo, se comenzó a experimentar con espejos en lugar de lentes para ca
 
 Durante más de un siglo, los telescopios refractores evolucionaron lentamente, hasta que en 1730 se introdujeron lentes acromáticas, lo que mejoró considerablemente la calidad de imagen. Los primeros telescopios reflectores, por su parte, enfrentaban el problema de pérdida de brillo debido a la oxidación de los espejos metálicos (fig.~\ref{fig:espejo_metalico_especulum}). Este inconveniente comenzó a resolverse en la década de 1850 con el uso de espejos de vidrio recubiertos, y más tarde, en 1932, con la implementación de espejos aluminizados.
 
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=0.6\textwidth]{newton_reflector_telescopio.jpg}
-%	\caption{Réplica del primer telescopio reflector registrado por Isaac Newton ante la Royal Society en 1672.}
-%	\label{fig:telescopio_reflector_newotoniano}
-%	\includegraphics[width=0.6\textwidth]{speculum_mirror_metal.jpg}
-%	\caption{Espejo metálico de 1.2 m de diámetro para un telescopio de 40 pies.}
-%	\label{fig:espejo_metalico_especulum}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{newton_reflector_telescopio.jpg}
+	\caption{Réplica del primer telescopio reflector registrado por Isaac Newton ante la Royal Society en 1672.}
+	\label{fig:telescopio_reflector_newotoniano}
+	\includegraphics[width=0.6\textwidth]{speculum_mirror_metal.jpg}
+	\caption{Espejo metálico de 1.2 m de diámetro para un telescopio de 40 pies.}
+	\label{fig:espejo_metalico_especulum}
+\end{figure}
 
 A mediados del siglo XX, los telescopios refractores más grandes alcanzaban aperturas de aproximadamente $1\,\mathrm{m}$ (39 pulgadas), mientras que los reflectores superaban los $10\,\mathrm{m}$ (33 pies). Actualmente, se están construyendo telescopios aún más grandes, con aperturas de entre 30 y 40 metros, muchos de ellos situados en órbita para evitar las distorsiones de la atmósfera terrestre.
 
@@ -75,72 +75,11 @@ Aun así, los telescopios ópticos terrestres siguen siendo herramientas cientí
 
 
 \section{Principios Ópticos Fundamentales}
+\label{modulo01_principios_opticos}. 
 
-\subsection*{La luz y su velocidad}
+Los principios ópticos generales se pueden encontrar en la Sección \ref{section00_principios_opticos_fundamentales}. En particular, los principios ópticos bajo los cuales funcionan los telescopios son la propagación de la luz al atravesar un medio y como esta es reflectada y/o refractada. 
 
-La luz, tal como la percibimos, corresponde a una fracción del espectro electromagnético que puede ser detectada por nuestro sistema visual. Su definición, en términos prácticos, está íntimamente relacionada con la respuesta fisiológica y psicológica del sistema ojo-cerebro frente a estímulos dentro del rango de la luz visible, que abarca longitudes de onda entre $400$ y $700\,\mathrm{nm}$.
-
-Por ejemplo, una mezcla de luz roja y verde es interpretada por nuestro sistema visual como luz amarilla, aunque no exista radiación electromagnética en la longitud de onda correspondiente al amarillo. Este fenómeno se conoce como \textit{mezcla aditiva de colores}, y es una propiedad emergente del procesamiento neuronal de la luz, más que una característica física de la radiación.
-
-\vspace{0.3cm}
-% FIGURA sugerida: diagrama con el espectro visible y un círculo de mezcla RGB
-
-\subsection*{Historia de la medición de la velocidad de la luz}
-
-Desde hace siglos, el ser humano ha intentado determinar si la luz posee una velocidad finita o si se propaga instantáneamente. Con el desarrollo de los telescopios comenzaron a realizarse los primeros experimentos.
-
-\paragraph{Galileo Galilei (siglo XVII):} Galileo intentó medir la velocidad de la luz con ayuda de un asistente. Cada uno portaba una linterna, y se situaban a unos tres kilómetros de distancia. Galileo destapaba su linterna y, al ver la luz, el asistente debía destapar la suya en respuesta. Galileo cronometraba el tiempo entre su acción inicial y la percepción del reflejo.
-
-Aunque ingenioso, el experimento no tuvo éxito. Hoy sabemos que la luz recorre esa distancia en aproximadamente $10^{-5}$ segundos, un intervalo imposible de medir con los instrumentos disponibles en la época. Además, el tiempo de reacción humana introducía un margen de error considerable.
-
-\vspace{0.3cm}
-% ILUSTRACIÓN sugerida: recreación simple del experimento con linternas
-
-\paragraph{Ole Rømer (1675):} El astrónomo danés Ole Rømer estudió durante varios años los eclipses de Io, una de las lunas de Júpiter. Observó que el tiempo entre eclipses variaba dependiendo de la posición relativa entre la Tierra y Júpiter: cuando la Tierra se alejaba, los eclipses parecían retrasarse.
-
-Rømer concluyó que la luz no se propagaba instantáneamente, sino que tardaba un tiempo finito en recorrer la distancia. Su trabajo representó la primera demostración experimental indirecta de que la luz tiene velocidad finita.
-
-\vspace{0.3cm}
-% ILUSTRACIÓN sugerida: esquema Tierra-Júpiter con Io mostrando trayectos de luz más largos/cortos
-
-\paragraph{James Bradley (1728):} El físico británico James Bradley utilizó un telescopio para observar un fenómeno conocido como aberración estelar. Detectó un desplazamiento cíclico de toda la esfera celeste a lo largo del año, el cual solo podía explicarse considerando la velocidad orbital de la Tierra y una velocidad finita de la luz.
-
-Su cálculo fue notablemente preciso para la época, estimando un valor cercano a $301,000\,\mathrm{km/s}$.
-
-\paragraph{Hippolyte Fizeau (1849):} El físico francés diseñó un experimento de laboratorio utilizando una rueda dentada giratoria y un haz de luz dirigido a un espejo situado a unos 8 km. Cuando la rueda alcanzaba cierta velocidad, el haz de luz reflejado quedaba bloqueado por el siguiente diente, permitiendo calcular el tiempo de viaje de la luz.
-
-Este fue el primer experimento exitoso para medir la velocidad de la luz sin necesidad de observaciones astronómicas.
-
-\paragraph{Albert A. Michelson (1879):} Michelson perfeccionó el método de Fizeau utilizando un espejo giratorio de alta precisión. El haz de luz era reflejado hacia un espejo distante y, al regresar, su desviación permitía calcular con precisión la velocidad de la luz. Este método se convirtió en uno de los más confiables del siglo XIX y le valió el Premio Nobel de Física en 1907.
-
-\vspace{0.3cm}
-% FIGURAS sugeridas: diagrama de rueda dentada de Fizeau y espejo giratorio de Michelson
-
-\subsection*{Relación con las constantes electromagnéticas}
-
-En la actualidad, uno de los métodos más exactos para conocer la velocidad de la luz se basa en las constantes fundamentales del electromagnetismo. La relación está dada por:
-
-\[
-c = \frac{1}{\sqrt{\epsilon_0 \mu_0}}
-\]
-
-Donde:
-\begin{itemize}
-	\item $\epsilon_0$ es la permitividad eléctrica del vacío ($8.854 \times 10^{-12}\, \text{F/m}$),
-	\item $\mu_0$ es la permeabilidad magnética del vacío ($4\pi \times 10^{-7}\, \text{N/A}^2$).
-\end{itemize}
-
-Esta expresión, derivada de las ecuaciones de Maxwell, describe cómo los campos eléctricos y magnéticos se propagan en el vacío. Como la luz es una onda electromagnética, su velocidad está determinada por estas constantes, lo cual demuestra que su propagación es finita y constante.
-
-\begin{mybox}[blue]{Velocidad de la luz en el vacío}[colbacktitle=blue!30!white, coltitle=black]
-	$c = 299\,792\,458 \, \text{m/s} \approx 3\cdot10^8 \text{m/s}$ 
-\end{mybox}
-
-\vspace{0.3cm}
-% FIGURA sugerida: resumen visual con ecuación, valor de c, y conexión con unidades SI
-
-
-\section*{Propagación de la luz}
+\subsection*{Propagación de la luz}
 
 La propagación de la luz, al tratarse de una oscilación del campo electromagnético, está regida por la ecuación de onda. No obstante, mucho antes de que Maxwell desarrollara la teoría del electromagnetismo, la propagación de la luz ya había sido descrita empíricamente mediante dos principios fundamentales: el \textbf{Principio de Huygens} y \textbf{el Principio de Fermat}.
 
@@ -171,7 +110,7 @@ Además, con el desarrollo posterior de la teoría ondulatoria y la óptica fís
 Por eso, al estudiar telescopios o cualquier sistema óptico, estos principios permiten anticipar cómo se comportará la luz al interactuar con lentes, espejos o incluso con la atmósfera. Aunque hoy contamos con modelos matemáticos más completos, estas ideas siguen siendo base de todo diseño óptico.
 
 
-\section{Reflexión y Refracción}
+\subsection{Reflexión y Refracción}
 
 La velocidad de la luz en medios transparentes como el aire, el agua o el vidrio es menor que su velocidad en el vacío. Esta diferencia da lugar a un parámetro óptico llamado \textbf{índice de refracción}, el cual se define como:
 
@@ -1050,3 +989,249 @@ La elección de un telescopio depende del equilibrio entre presupuesto, facilida
 %*   ¿Qué consideraciones son importantes al **elegir un telescopio**? (Aunque esta pregunta es general, las fuentes proporcionan mucha información que influiría en la respuesta).
 %
 %Estas preguntas cubren una amplia gama de temas relacionados con los telescopios, desde sus tipos y principios ópticos hasta su historia y consideraciones prácticas.
+
+
+
+
+La velocidad de la luz en medios transparentes como el aire, el agua o el vidrio es menor que su velocidad en el vacío. Esta diferencia da lugar a un parámetro óptico llamado \textbf{índice de refracción}, el cual se define como:
+
+\begin{mybox}[blue]{Índice de refracción}[colbacktitle=blue!30!white, coltitle=black]
+	$n = \frac{c}{v}$
+\end{mybox}
+
+donde:
+\begin{itemize}
+	\item $c$ es la velocidad de la luz en el vacío,
+	\item $v$ es la velocidad de la luz en el medio considerado.
+\end{itemize}
+
+Cuando un rayo de luz incide sobre la interfaz entre dos medios con diferente índice de refracción (por ejemplo, aire y vidrio), una parte de la energía se refleja y otra parte penetra en el segundo medio, cambiando de dirección. Este fenómeno se conoce como \textbf{refracción}.
+
+\begin{figure}[H]		
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/refraction_reflection.png}
+	\caption{El ángulo de reflexión es igual al ángulo de incidencia. El ángulo de refracción $\theta_2$ depende de la relación entre las velocidades de propagación en ambos medios.}
+	\label{fig:refraccón_reflexión_planos}
+\end{figure} 
+
+En la figura \ref{fig:refraccón_reflexión_planos}, se observa un rayo de luz incidente sobre la superficie de un vidrio. El ángulo $\theta_1$ entre el rayo incidente y la normal se denomina \textbf{ángulo de incidencia}, y el plano definido por ambos se llama \textbf{plano de incidencia}.
+
+El rayo reflejado se encuentra en el mismo plano y forma un ángulo igual con la normal, lo cual se expresa con la \textbf{ley de la reflexión}:
+
+\begin{mybox}[blue]{Ley de la reflexión}[colbacktitle=blue!30!white, coltitle=black]
+	$\theta'_1 = \theta_1$
+\end{mybox}
+
+Por otro lado, el rayo que entra al segundo medio (el rayo \textbf{refractado}) cambia de dirección debido al cambio de velocidad de propagación. La relación entre los ángulos y las velocidades en cada medio se expresa como:
+
+\begin{equation}
+	\frac{1}{v_1} \sin(\theta_1) = \frac{1}{v_2} \sin(\theta_2)
+	\label{eq:refraccion_dos_medios}
+\end{equation}
+
+Si sustituimos las velocidades por sus respectivas expresiones en términos del índice de refracción ($v = c/n$), obtenemos la conocida \textbf{ley de Snell}:
+
+\begin{mybox}[blue]{Ley de Snell de la refracción}[colbacktitle=blue!30!white, coltitle=black]
+	$n_1 \sin(\theta_1) = n_2 \sin(\theta_2)$
+\end{mybox} 
+
+\subsection{Mecanismos físicos de la reflexión y la refracción}
+
+A nivel microscópico, la reflexión y la refracción pueden entenderse como fenómenos de interacción entre la luz y los átomos del medio. Cuando un rayo de luz incide sobre una superficie, sus campos eléctricos hacen oscilar las cargas (principalmente electrones) en los átomos del material. Estas oscilaciones inducidas producen una nueva radiación: la luz es absorbida y reemitida por los átomos.
+
+En la reflexión, parte de las ondas reemitidas se propagan en dirección opuesta al haz de luz incidente. Debido a interferencias constructivas, estas ondas se refuerzan en una dirección bien definida, formando el rayo reflejado.
+
+En la refracción, la luz reemitida hacia adelante también sufre interferencia constructiva, pero en una dirección distinta a la original. El resultado neto es un cambio en la dirección de propagación, determinado por la diferencia de velocidades de fase en cada medio.
+
+\subsection*{Reflexión Especular y Difusa}
+
+La reflexión especular ocurre en superficies suaves y lisas. Como se muestra en la figura \ref{fig:ref_especular_difusa}, los rayos de luz provenientes del objeto $P$ se reflejan en el espejo formando una imagen como si provinieran del punto $P'$, conocida como la \textbf{imagen virtual} del punto $P$.
+
+Por otro lado, la reflexión difusa ocurre cuando la superficie es rugosa, es decir, los rayos provenientes de un punto se reflejan en múltiples direcciones y no divergen desde un único punto.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textheight]{ref_especular_difusa.png}
+	\caption{Reflexión especular y difusa.}
+	\label{fig:ref_especular_difusa}
+\end{figure}
+
+\subsection*{Dispersión}
+
+El índice de refracción de un material depende ligeramente de la longitud de onda de la luz incidente. Para la mayoría de los materiales, $n$ disminuye a medida que aumenta la longitud de onda. Esta dependencia se conoce como \textbf{dispersión}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/descomposicion_luz.jpg}
+	\caption{Descomposición de la luz blanca al atravesar un prisma.}
+	\label{fig:dispersion_prisma_luz}
+\end{figure}
+
+\subsection{Reflexión y Espejos}
+
+\subsubsection*{Espejos Planos}
+
+Los espejos planos son los más comunes. En la figura \ref{fig:esplejos_planos} se ilustran dos rayos que provienen de los extremos de una botella (en realidad van en todas las direcciones), pero son los que entran en el ojo. Los rayos reflejados parecen provenir de un punto detrás del espejo: la \textbf{imagen virtual}. Siempre que un objeto esté frente al espejo, existe una posición desde la cual puede observarse su imagen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/espejo_plano.png}
+	\caption{Espejo plano reflejando una botella. Se marcan los rayos que ingresan al ojo.}
+	\label{fig:esplejos_planos}
+\end{figure}
+
+También se puede observar una \textbf{inversión en profundidad}, por ejemplo, la mano derecha reflejada parece la izquierda. Esto puede entenderse como un cambio en la orientación del sistema de coordenadas: si en un sistema cartesiano $\hat{i} \times \hat{j} = \hat{k}$, al reflejarse, se convierte en $\hat{i} \times \hat{j} = -\hat{k}$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/inversion_profundidad.jpg}
+	\caption{Inversión de profundidad en espejos planos.}
+	\label{fig:inversion_profundidad}
+\end{figure}
+
+\subsubsection*{Espejos Esféricos}
+
+En la figura \ref{fig:espejo_esferico}, un haz de rayos provenientes del punto $P$ sobre el eje óptico incide sobre un espejo esférico cóncavo y converge en el punto $P'$, conocido como \textbf{imagen real}, ya que la luz realmente pasa por ese punto. Esta imagen puede ser observada directamente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/espejo_esferico_AV.jpg}
+	\caption{Los rayos provenientes del punto $P$ se reflejan en el espejo cóncavo y convergen en $P'$.}
+	\label{fig:espejo_esferico}
+\end{figure}
+
+Cuando los rayos reflejados se alejan del eje, pueden producirse \textbf{aberraciones esféricas}, ya que no convergen exactamente en el mismo punto.
+
+Para relacionar $P$ y $P'$, se utiliza la geometría óptica. En la figura \ref{fig:geometria_espejos_imagen} se puede deducir que:
+
+\begin{equation}
+	\alpha + \gamma = 2\beta
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{images/geometria_espejos.png}
+	\caption{Geometría de reflexión en espejos esféricos.}
+	\label{fig:geometria_espejos_imagen}
+\end{figure}
+
+\subsubsection*{Fabricación de Espejos}
+
+La fabricación de espejos requiere materiales pulidos con alta precisión, como vidrio con recubrimiento de aluminio o plata. El proceso varía según si el espejo es plano o curvo, y puede implicar técnicas como deposición por vacío o esmerilado óptico.
+
+\subsection{Refracción y Lentes}
+
+Cuando un objeto está parcialmente sumergido (por ejemplo, en agua), se observa un cambio en su forma aparente. Esto ocurre por la \textbf{refracción}: la luz cambia de dirección al pasar de un medio a otro, debido al cambio de velocidad de propagación.
+
+Como se definió antes, el índice de refracción es:
+
+\begin{equation}
+	n = \frac{c}{v}
+	\label{eq:indice_refraccion}
+\end{equation}
+
+Por ejemplo: aire $\approx 1.003$, agua $= 1.33$, vidrio $= 1.5$.
+
+Cuando la luz pasa de un medio menos denso a uno más denso ($n_1 < n_2$), se acerca a la normal. Si va del agua al aire ($n_1 > n_2$), se aleja de la normal.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/Snells_law2.png}
+	\caption{Refracción de la luz en una interfaz entre dos medios.}
+	\label{fig:snell_law}
+\end{figure}
+
+Este cambio de dirección también se explica por el \textbf{Principio de Fermat}: la luz siempre sigue el camino óptico que le toma menos tiempo. Esta distancia efectiva se llama \textbf{camino óptico} y se calcula como $nd$.
+
+Un caso especial ocurre cuando la luz pasa de un medio
+
+
+
+\label{sec:consideraciones_para_elegir_telescopio}
+
+La elección de un telescopio debe realizarse considerando todos los parámetros discutidos previamente, así como el tipo de observación que se desea realizar (planetaria, cielo profundo, astrofotografía o terrestre). A continuación, se presentan los factores clave a tener en cuenta al momento de elegir un telescopio:
+
+\subsection*{Tipo de Telescopio}
+
+\begin{itemize}
+	\item \textbf{Refractor:} utiliza lentes para formar la imagen. Son robustos y duraderos, ya que los elementos ópticos están sellados y protegidos. Requieren poco mantenimiento y son ideales para observación planetaria y lunar. Sin embargo, presentan aberración cromática y, a partir de ciertas aperturas, su fabricación se vuelve costosa.
+	
+	\item \textbf{Reflector:} utiliza espejos (Newtoniano, principalmente). Ofrecen aperturas mayores a menor costo, lo que los hace ideales para observar objetos de cielo profundo como galaxias y nebulosas. Requieren colimación periódica y sus componentes ópticos están más expuestos.
+	
+	\item \textbf{Catadióptrico:} combinación de lentes y espejos. Corrigen muchas aberraciones y ofrecen un buen equilibrio entre calidad óptica, portabilidad y versatilidad. Son más compactos, tienen lentes protegidas y requieren poco mantenimiento. Aptos para planetaria, cielo profundo e incluso astrofotografía.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{Insertar imagen sugerida:} Comparación visual de los tres tipos: ruta óptica, tamaño del tubo y campo de visión.
+
+\subsection*{Apertura (Diámetro del objetivo)}
+\label{subsec:consideracion_apertura}
+
+La apertura determina cuánta luz puede captar el telescopio. Cuanto mayor sea, mejor será la visibilidad de objetos tenues y mayor la capacidad para distinguir detalles finos (resolución angular). Está directamente relacionada con el poder de resolución, como se explica en \ref{subsec:apertura} y \ref{subse:aumento_resolucion}.
+
+\begin{equation}
+	\text{Resolución (")} \approx \frac{138}{D \text{ (mm)}} \quad \text{ o } \quad R = 1.22 \cdot \frac{\lambda}{D}
+\end{equation}
+
+Una apertura mayor implica:
+\begin{itemize}
+	\item Mayor captación de luz.
+	\item Mejor resolución (menor disco de difracción).
+	\item Aumentos útiles más altos.
+\end{itemize}
+
+\subsection*{Distancia Focal}
+
+La distancia focal es la distancia desde el objetivo al punto donde converge la luz. Este valor influye en el aumento del telescopio y en el campo visual. 
+
+\begin{itemize}
+	\item Focales largas ($f > 1000\,\text{mm}$): aumentos más altos, campo visual más estrecho.
+	\item Focales cortas ($f < 700\,\text{mm}$): campo más amplio, útiles para cielo profundo y observación de grandes regiones del cielo.
+\end{itemize}
+
+\subsection*{Relación Focal}
+
+La relación focal es el cociente entre la distancia focal y el diámetro de la apertura ($f/\#$). 
+
+\[
+f/\# = \frac{f}{D}
+\]
+
+\begin{itemize}
+	\item $f/\# < 6$: telescopios rápidos, ideales para cielo profundo y astrofotografía.
+	\item $f/\# > 8$: telescopios lentos, ideales para planetaria y observaciones de alto detalle.
+\end{itemize}
+
+\subsection*{Aumento}
+
+El aumento se calcula como:
+
+\[
+M = \frac{f_\text{telescopio}}{f_\text{ocular}}
+\]
+
+Aunque es un parámetro comúnmente promocionado, no debe considerarse el más importante al inicio. Aumentos altos con poca apertura resultan en imágenes oscuras y con poco contraste. Lo ideal es trabajar en el rango útil de aumento según la apertura:
+
+\begin{itemize}
+	\item Mínimo útil: $\sim 7 \times$ por cada cm de apertura.
+	\item Máximo útil: $\sim 2 \times$ por mm de apertura.
+\end{itemize}
+
+\subsection*{Montura}
+
+La montura es tan importante como el tubo óptico. Debe ser estable, precisa y adecuada al tipo de uso:
+
+\begin{itemize}
+	\item \textbf{Altazimutal:} intuitiva, fácil de usar. Ideal para observación terrestre o astronómica casual. Ver sección \ref{sec:montura_altazimutal}.
+	
+	\item \textbf{Ecuatorial:} permite seguimiento celeste con un solo eje. Ideal para astrofotografía y seguimiento prolongado. Ver sección \ref{subsec:montura_ecuatorial}.
+	
+	\item \textbf{Dobson:} variante simplificada de la altazimutal. Estable y económica. Ideal para cielo profundo con telescopios reflectores grandes. Ver sección \ref{subsec:montura_dobson}.
+\end{itemize}
+
+---
+
+\textbf{Conclusión:}  
+La elección de un telescopio depende del equilibrio entre presupuesto, facilidad de uso, mantenimiento, tipo de observación y portabilidad. Un telescopio de apertura moderada (por ejemplo, 100–130 mm), con montura estable, es ideal para iniciarse en la observación astronómica. A partir de ahí, se puede escalar en complejidad y especialización según el tipo de observación deseada.
+
+%

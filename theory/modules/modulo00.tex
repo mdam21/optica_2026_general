@@ -1,0 +1,158 @@
+% Modulo 1: Optica - Fundamentals
+% Objetivo: Proporcionar a los miembros del club la información fundamental de telescopios con énfasis en telescopios Newtonianos (reflectores), incluyendo historia, principios ópticos, ventajas y desventajas y aplicaciones básicas. 
+
+
+%
+%\section{Preguntas y Discusión}
+%
+%
+%
+%*   ¿Cuáles son los **tres tipos principales de telescopios**?
+%*   Describe cómo funciona un **telescopio refractor** y qué componentes utiliza.
+%*   ¿Cuáles son algunas de las **ventajas y desventajas** de un telescopio refractor?
+%*   ¿Qué es la **aberración cromática** y en qué tipo de telescopio es un problema común?
+%*   Explica el funcionamiento de un **telescopio reflector** y menciona sus componentes principales.
+%*   ¿Para qué tipo de observaciones son más apropiados los **telescopios reflectores**?
+%*   ¿Qué es un **telescopio catadióptrico** y cómo combina diferentes elementos ópticos?
+%*   ¿Cuáles son las **ventajas** de un telescopio catadióptrico?
+%*   ¿Qué se entiende por la **apertura** de un telescopio y por qué es importante?
+%*   ¿Cómo afecta una **mayor apertura** a la observación astronómica?
+%*   ¿Qué es la **distancia focal** de un telescopio?
+%*   ¿Cómo se relaciona la distancia focal con el **aumento** de un telescopio?
+%*   ¿Qué es la **resolución óptica** o el poder de resolución de un telescopio?
+%*   ¿Por qué es importante tener una buena **resolución** en un telescopio astronómico?
+%*   ¿Cómo se puede calcular la **capacidad de resolución** de un telescopio según el criterio de Rayleigh?
+%*   ¿Cómo se diferencia el criterio de Dawes del criterio de Rayleigh para calcular la resolución?
+%*   ¿Qué es el **"seeing"** y cómo afecta a la capacidad de resolución de un telescopio terrestre?
+%*   ¿Cuál es la función del **objetivo** en un telescopio?
+%*   ¿Cuál es la función del **ocular** en un telescopio?
+%*   ¿Qué se entiende por **ganancia de luz** en un telescopio?
+%*   ¿Cómo se calcula la ganancia de luz de un telescopio?
+%*   ¿Por qué los primeros telescopios utilizaban **lentes** y por qué ahora se prefieren los **espejos** en telescopios grandes?
+%*   ¿Qué ventajas ofrecen los **espejos** sobre las lentes en la construcción de telescopios?
+%*   ¿Cómo influyen los **efectos de la atmósfera terrestre** en la observación astronómica?
+%*   ¿Qué son las **"ventanas de la atmósfera"** y por qué son importantes para la astronomía terrestre?
+%*   ¿Por qué es costoso construir y mantener **observatorios astronómicos** en tierra?
+%*   ¿Cuáles son algunas de las **ventajas de observar desde el espacio** en comparación con la observación terrestre?
+%*   ¿Qué tipo de radiación electromagnética es mejor observar desde el **espacio**?
+%*   ¿Quién fue **Galileo Galilei** y cuál fue su papel en la historia del telescopio?
+%*   ¿Qué descubrimientos astronómicos importantes realizó **Galileo** con su telescopio?
+%*   ¿Cuál fue la contribución de **Isaac Newton** al diseño del telescopio?
+%*   ¿Qué es la **aberración cromática** y cómo la resolvió Newton en su diseño de telescopio?
+%*   ¿Qué tipos de **monturas** se utilizan para los telescopios? (Aunque no se detalla en las fuentes, se menciona la montura ecuatorial).
+%*   ¿Qué diferencia hay entre **reflexión** y **refracción** de la luz?
+%*   ¿Qué es el **plano focal** de un telescopio?
+%*   ¿Cómo se forma una **imagen** en un telescopio refractor?
+%*   ¿Cómo se forma una **imagen** en un telescopio reflector?
+%*   ¿Qué papel juega la **óptica geométrica** en la comprensión del funcionamiento de los telescopios?
+%*   ¿Qué es la **difracción** y cómo limita la resolución de un telescopio?
+%*   ¿Qué son los **discos de Airy** y cómo se relacionan con la resolución?
+%*   ¿Por qué es importante la **calidad de las ópticas** (lentes o espejos) en un telescopio?
+%*   ¿Qué consideraciones son importantes al **elegir un telescopio**? (Aunque esta pregunta es general, las fuentes proporcionan mucha información que influiría en la respuesta).
+%
+%Estas preguntas cubren una amplia gama de temas relacionados con los telescopios, desde sus tipos y principios ópticos hasta su historia y consideraciones prácticas.
+Esta guía forma parte del minicurso organizado por el Capítulo de Óptica de la universidad Yachay Tech, realizado en Marzo del 2026. 
+
+
+\section{optica para dummies}
+
+
+\section{Principios Ópticos Fundamentales}
+\label{section00_principios_opticos_fundamentales}
+
+\subsection*{La luz y su velocidad}
+
+La luz, tal como la percibimos, corresponde a una fracción del espectro electromagnético que puede ser detectada por nuestro sistema visual. Su definición, en términos prácticos, está íntimamente relacionada con la respuesta fisiológica y psicológica del sistema ojo-cerebro frente a estímulos dentro del rango de la luz visible, que abarca longitudes de onda entre $400$ y $700\,\mathrm{nm}$.
+
+Por ejemplo, una mezcla de luz roja y verde es interpretada por nuestro sistema visual como luz amarilla, aunque no exista radiación electromagnética en la longitud de onda correspondiente al amarillo. Este fenómeno se conoce como \textit{mezcla aditiva de colores}, y es una propiedad emergente del procesamiento neuronal de la luz, más que una característica física de la radiación.
+
+\vspace{0.3cm}
+% FIGURA sugerida: diagrama con el espectro visible y un círculo de mezcla RGB
+
+\subsection*{Historia de la medición de la velocidad de la luz}
+
+Desde hace siglos, el ser humano ha intentado determinar si la luz posee una velocidad finita o si se propaga instantáneamente. Con el desarrollo de los telescopios comenzaron a realizarse los primeros experimentos.
+
+\paragraph{Galileo Galilei (siglo XVII):} Galileo intentó medir la velocidad de la luz con ayuda de un asistente. Cada uno portaba una linterna, y se situaban a unos tres kilómetros de distancia. Galileo destapaba su linterna y, al ver la luz, el asistente debía destapar la suya en respuesta. Galileo cronometraba el tiempo entre su acción inicial y la percepción del reflejo.
+
+Aunque ingenioso, el experimento no tuvo éxito. Hoy sabemos que la luz recorre esa distancia en aproximadamente $10^{-5}$ segundos, un intervalo imposible de medir con los instrumentos disponibles en la época. Además, el tiempo de reacción humana introducía un margen de error considerable.
+
+\vspace{0.3cm}
+% ILUSTRACIÓN sugerida: recreación simple del experimento con linternas
+
+\paragraph{Ole Rømer (1675):} El astrónomo danés Ole Rømer estudió durante varios años los eclipses de Io, una de las lunas de Júpiter. Observó que el tiempo entre eclipses variaba dependiendo de la posición relativa entre la Tierra y Júpiter: cuando la Tierra se alejaba, los eclipses parecían retrasarse.
+
+Rømer concluyó que la luz no se propagaba instantáneamente, sino que tardaba un tiempo finito en recorrer la distancia. Su trabajo representó la primera demostración experimental indirecta de que la luz tiene velocidad finita.
+
+\vspace{0.3cm}
+% ILUSTRACIÓN sugerida: esquema Tierra-Júpiter con Io mostrando trayectos de luz más largos/cortos
+
+\paragraph{James Bradley (1728):} El físico británico James Bradley utilizó un telescopio para observar un fenómeno conocido como aberración estelar. Detectó un desplazamiento cíclico de toda la esfera celeste a lo largo del año, el cual solo podía explicarse considerando la velocidad orbital de la Tierra y una velocidad finita de la luz.
+
+Su cálculo fue notablemente preciso para la época, estimando un valor cercano a $301,000\,\mathrm{km/s}$.
+
+\paragraph{Hippolyte Fizeau (1849):} El físico francés diseñó un experimento de laboratorio utilizando una rueda dentada giratoria y un haz de luz dirigido a un espejo situado a unos 8 km. Cuando la rueda alcanzaba cierta velocidad, el haz de luz reflejado quedaba bloqueado por el siguiente diente, permitiendo calcular el tiempo de viaje de la luz.
+
+Este fue el primer experimento exitoso para medir la velocidad de la luz sin necesidad de observaciones astronómicas.
+
+\paragraph{Albert A. Michelson (1879):} Michelson perfeccionó el método de Fizeau utilizando un espejo giratorio de alta precisión. El haz de luz era reflejado hacia un espejo distante y, al regresar, su desviación permitía calcular con precisión la velocidad de la luz. Este método se convirtió en uno de los más confiables del siglo XIX y le valió el Premio Nobel de Física en 1907.
+
+\vspace{0.3cm}
+% FIGURAS sugeridas: diagrama de rueda dentada de Fizeau y espejo giratorio de Michelson
+
+\subsection*{Relación con las constantes electromagnéticas}
+
+En la actualidad, uno de los métodos más exactos para conocer la velocidad de la luz se basa en las constantes fundamentales del electromagnetismo. La relación está dada por:
+
+\[
+c = \frac{1}{\sqrt{\epsilon_0 \mu_0}}
+\]
+
+Donde:
+\begin{itemize}
+	\item $\epsilon_0$ es la permitividad eléctrica del vacío ($8.854 \times 10^{-12}\, \text{F/m}$),
+	\item $\mu_0$ es la permeabilidad magnética del vacío ($4\pi \times 10^{-7}\, \text{N/A}^2$).
+\end{itemize}
+
+Esta expresión, derivada de las ecuaciones de Maxwell, describe cómo los campos eléctricos y magnéticos se propagan en el vacío. Como la luz es una onda electromagnética, su velocidad está determinada por estas constantes, lo cual demuestra que su propagación es finita y constante.
+
+\begin{mybox}[blue]{Velocidad de la luz en el vacío}[colbacktitle=blue!30!white, coltitle=black]
+	$c = 299\,792\,458 \, \text{m/s} \approx 3\cdot10^8 \text{m/s}$ 
+\end{mybox}
+
+\vspace{0.3cm}
+% FIGURA sugerida: resumen visual con ecuación, valor de c, y conexión con unidades SI
+
+
+\section*{Propagación de la luz}
+
+La propagación de la luz, al tratarse de una oscilación del campo electromagnético, está regida por la ecuación de onda. No obstante, mucho antes de que Maxwell desarrollara la teoría del electromagnetismo, la propagación de la luz ya había sido descrita empíricamente mediante dos principios fundamentales: el \textbf{Principio de Huygens} y \textbf{el Principio de Fermat}.
+
+El principio de Huygens, propuesto por el físico holandés Christiaan Huygens en el siglo XVII, describe el comportamiento de los frentes de onda de forma geométrica:
+
+\begin{mybox}[green]{Principio de Huygens}[colbacktitle=blue!30!white, coltitle=black]
+	Cada punto de un frente de onda primario actúa como foco, o fuente, de ondas esféricas secundarias que se propagan con la misma velocidad y frecuencia que la onda original. El nuevo frente de onda, al cabo de un intervalo de tiempo, es la envolvente de estas ondas secundarias.
+\end{mybox}
+
+Por otro lado, el principio de Fermat, basado en una idea geométrica y variacional, establece:
+
+\begin{mybox}[green]{Principio de Fermat}[colbacktitle=blue!30!white, coltitle=black]
+	La trayectoria que sigue la luz al pasar de un punto \textbf{A} a un punto \textbf{B} es aquella en la que el tiempo de recorrido es mínimo. Es decir, la luz tiende a seguir el camino óptico más rápido.
+\end{mybox}
+
+\vspace{0.3cm}
+% FIGURA SUGERIDA: Comparación visual de Huygens y Fermat con una superficie separadora aire-vidrio
+
+Estos principios no solo son compatibles, sino que se complementan. El primero ofrece una visión geométrica local, útil para explicar fenómenos como la difracción, mientras que el segundo permite deducir leyes globales como la de la refracción.
+
+Ambos principios han sido herramientas esenciales en la óptica geométrica. Por ejemplo, el principio de Fermat permite derivar directamente la ley de Snell al analizar el cambio de trayectoria de la luz cuando atraviesa medios con diferente índice de refracción. En cambio, el principio de Huygens resulta fundamental para interpretar cómo se propaga una onda al encontrarse con una rendija o un obstáculo, fenómeno conocido como difracción.
+
+Además, con el desarrollo posterior de la teoría ondulatoria y la óptica física, se comprendió que estas aproximaciones, aunque simples, son consistentes con la naturaleza ondulatoria de la luz y siguen siendo válidas en muchos contextos experimentales. Especialmente en situaciones donde las longitudes de onda son pequeñas en comparación con los objetos que la luz encuentra en su trayectoria, lo que permite aplicar la óptica geométrica de forma efectiva.
+
+\vspace{0.3cm}
+% ILUSTRACIÓN SUGERIDA: Visualización de rayos con cambio de medio + frentes de onda + interferencia
+
+Por eso, al estudiar telescopios o cualquier sistema óptico, estos principios permiten anticipar cómo se comportará la luz al interactuar con lentes, espejos o incluso con la atmósfera. Aunque hoy contamos con modelos matemáticos más completos, estas ideas siguen siendo base de todo diseño óptico.
+
+
+\section{Reflexión y Refracción}
