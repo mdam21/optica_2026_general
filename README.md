@@ -10,11 +10,15 @@ El material de este repositorio está bajo la licencia **CC BY-SA 4.0**.
 │   ├── telescopio/
 │   │   ├── cad/           # Archivos de software CAD
 │   │   └── docs/          # Manual de ensamblaje
-│   └── espectrofluorometro/
+│   ├── espectrofluorometro/
+│   │   ├── cad/
+│   │   ├── electronics/   # Esquemas de circuitos (Kicad/EasyEDA)
+│   │   └── docs/          # Manual de ensamblaje
+│   └── grabador_laser/
 │       ├── cad/
-│       ├── electronics/   # Esquemas de circuitos (Kicad/EasyEDA)
-│       └── docs/          # Manual de ensamblaje
-
+│       ├── electronics/
+│       └── docs/
+│
 ├── software/
 │   ├── drivers/           # Control de sensore
 │   ├── processing/        # Scripts generales Python
