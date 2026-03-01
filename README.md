@@ -37,7 +37,7 @@ www.olakease.com
 Este proyecto es propiedad intelectual de:
 * **Andrey Mereshchenkov** - Tutor responsable del Capítulo de Öptica YT
 * Damián Andrango - *Desarrollo principal y revisor de teoría*
-* Jhon Armijos Revisor de teoría y apoyo a las prácticas
+* Jhon Armijos - Revisor de teoría y apoyo a las prácticas
 * Sebastián Calderón - Presidente y representante general del capítulo
 
 ## Licencia
